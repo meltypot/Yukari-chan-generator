@@ -1,0 +1,207 @@
+/*------------------------------------------------*/
+/* variables */
+:root {
+	--header-bg: #292f33;
+	--base-font: #292f33;
+	--container-bg: #f5f8fa;
+	--column-bg: #ffffff;
+	--column-border: #e6ecf0;
+	--subheader-bg: #e9f0ee;
+	--parts-color: #1da1d2;
+	--left-column-width: 540px;
+	--left-column-height: 1000px;
+	--layer-margin-top: 0px;
+	--layer-margin-left: 16px;
+	--header-height: 30px;
+	--footer-height: 20px;
+}
+/*------------------------------------------------*/
+/* reset */
+* {
+	margin: 0;
+	padding: 0;
+	font-family:
+		"メイリオ", Meiryo,
+		"ヒラギノ角ゴ Pro W3",
+		"HIragino Kaku Gothic Pro W3",
+		"HIragino Kaku Gothic Pro",
+		Osaka,
+		"ＭＳ Ｐゴシック", "MS P Gothic",
+		sans-serif;
+}
+img {
+	display: block;
+}
+div {
+	box-sizing: border-box;
+}
+li {
+	display: block;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+/*------------------------------------------------*/
+/* common */
+body {
+	color: var(--base-font);
+}
+h1 {
+	padding: 2px 5px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #ffffff;
+}
+h2 {
+	font-size: 15px;
+	font-weight: bold;
+}
+.show {
+	display: block;
+}
+.hidden {
+	display: none;
+}
+/*------------------------------*/
+/* parts button */
+.parts-row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.parts-row > li {
+	flex: 0 1 auto;
+	padding-bottom: 5px;
+}
+span.parts {
+	font-size: 12px;
+	border-radius: 4px;
+	padding: 1px 3px;
+	margin: 0px 3px;
+	user-select: none;
+}
+span.parts:hover {
+	box-shadow: 0 0 2px 0px var(--parts-color);
+}
+span.parts_enabled {
+	color: var(--parts-color);
+	font-weight: bold;
+	cursor: pointer;
+	background-color: #fff;
+	border: 1px solid var(--parts-color);
+}
+span.parts_selected {
+	color: #ffffff;
+	font-weight: bold;
+	cursor: pointer;
+	background-color: var(--parts-color);
+	border: 1px solid var(--parts-color);
+}
+span.parts_disabled {
+	color: #878787;
+	font-weight: bold;
+	cursor: pointer;
+	background-color: #fff;
+	border: 1px solid #878787;
+}
+/*------------------------------------------------*/
+/* main columns */
+.main-header {
+	background-color: var(--header-bg);
+	height: var(--header-height);
+}
+.main-footer {
+	background-color: var(--container-bg);
+	height: var(--footer-height);
+	padding: 5px 5px;
+	border-top: 1px solid var(--column-border);
+	font-size: 12px;
+	text-align: right;
+}
+.footer-container {
+	display: flex;
+}
+.footer-left {
+	flex: 1 1 auto;
+	text-align: left;
+}
+.footer-right {
+	flex: 1 1 auto;
+	text-align: right;
+}
+.app-container {
+	background-color: var(--container-bg);
+	padding: 5px;
+	display: flex;
+}
+.left-column {
+	flex: 0 0 var(--left-column-width);
+	display: flex;
+	position: relative;
+}
+.right-column {
+	flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+.app-random-button {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	z-index: 110;
+}
+/*------------------------------------------------*/
+/* layer */
+.app-layer {
+	flex: 1 1 auto;
+	margin: 0 5px 0 0;
+	height: var(--left-column-height);
+	background-color: var(--column-bg);
+	border: 1px solid var(--column-border);
+}
+/*------------------------------*/
+.layer-list {
+	padding: 5px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	position: relative;
+}
+.layer-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.layer-image {
+	position: absolute;
+	top: var(--layer-margin-top);
+	left: var(--layer-margin-left);
+}
+/*------------------------------------------------*/
+/* parts list */
+.app-parts {
+	flex: 1 1 auto;
+	margin: 0;
+}
+.parts-set {
+	background-color: var(--column-bg);
+	border: 1px solid var(--column-border);
+	margin-bottom: 5px;
+}
+/*---------------*/
+.parts-header {
+	height: 22px;
+	background-color: var(--subheader-bg);
+	display: flex;
+}
+.parts-header-title {
+	flex: 1 1 auto;
+	padding-left: 5px;
+}
+.parts-list {
+	padding: 5px 5px 0 5px;
+}
